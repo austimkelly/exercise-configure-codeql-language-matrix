@@ -5,6 +5,12 @@ on:
     branches: [main]
 
 jobs:
+  analyze:
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['javascript-typescript', 'python']
+
   CodeQL-Build:
     runs-on: ubuntu-latest
 
